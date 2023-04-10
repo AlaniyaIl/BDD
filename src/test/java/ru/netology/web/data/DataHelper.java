@@ -41,7 +41,7 @@ public static class CardInfo{
     public static CardInfo getSecondCardBalance(){
         return new CardInfo("0f3f5c2a-249e-4c3d-8287-09f7a039391d","5559000000000002");
     }
-    public static int generateValidAmount(int balance) {
+    public static int generateValidAmount(Integer balance) {
         return new Random().nextInt(balance) + 1;
     }
 
