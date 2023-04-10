@@ -6,11 +6,12 @@ import ru.netology.web.data.DataHelper;
 import ru.netology.web.page.LoginPageV1;
 
 import static com.codeborne.selenide.Selenide.open;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class IbankTest {
 
     @Test
-    void loginPage (){
+    void loginPage() {
         var loginPage = open("http://localhost:9999", LoginPageV1.class);
         var authInfo = DataHelper.getAuthInfo();
         var verificationPage = loginPage.validLogin(authInfo);
@@ -31,3 +32,4 @@ public class IbankTest {
         assertEquals(expectedBalanceOfSecondCard, actualBalanceOfSecondCard);
 
     }
+}

@@ -33,8 +33,8 @@ public class DashboardPage {
         return Integer.parseInt(value);
     }
 
-    public LoginPageV2 selectCardToTransfer(DataHelper.CardInfo cardInfo) {
+    public Transfer selectCardToTransfer(DataHelper.CardInfo cardInfo) {
         cards.findBy(attribute("data-test-id", cardInfo.getId())).$("button").click();
-        return new LoginPageV2();
+        return new Transfer();
     }
 }
